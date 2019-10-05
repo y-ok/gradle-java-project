@@ -17,6 +17,9 @@ plugins {
     id 'com.github.sherter.google-java-format' version '0.8'
 }
 
+// Set pre-commit to .git/hooks
+apply from: rootProject.file('gradle/install-git-hooks.gradle')
+
 repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
