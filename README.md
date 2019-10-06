@@ -18,3 +18,7 @@
 ### フォーマッター
 
 - [google/google-java-format](https://github.com/google/google-java-format)
+
+### 静的解析
+
+- [SpotBugs](https://spotbugs.readthedocs.io/en/stable/index.html)

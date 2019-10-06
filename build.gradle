@@ -16,6 +16,9 @@ plugins {
     // Code coverage
     id 'jacoco'
 
+    // SpotBugs
+    id 'com.github.spotbugs' version '2.0.0'
+
     // Google Formatter
     id 'com.github.sherter.google-java-format' version '0.8'
 }
@@ -53,6 +56,16 @@ jacocoTestReport {
         csv.enabled false
         html.destination file("${buildDir}/jacocoHtml")
     }
+}
+
+spotbugs {
+  toolVersion = '3.1.12'
+}
+
+// To generate an HTML report instead of XML
+tasks.withType(com.github.spotbugs.SpotBugsTask) {
+  reports.xml.enabled = false
+  reports.html.enabled = true
 }
 
 // task to make src/main/resources and test/resources
