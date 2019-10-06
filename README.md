@@ -24,3 +24,8 @@
 ### 静的解析
 
 - [SpotBugs](https://spotbugs.readthedocs.io/en/stable/index.html)
+
+### OSS
+
+- [Lombok](https://projectlombok.org/)
+  - [【Java】Lombokで冗長コードを削減しよう](https://www.casleyconsulting.co.jp/blog/engineer/107/)
