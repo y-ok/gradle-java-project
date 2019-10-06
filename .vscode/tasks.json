@@ -18,6 +18,11 @@
       }
     },
     {
+      "label": "check",
+      "type": "shell",
+      "command": "./gradlew check"
+    },
+    {
       "label": "clean",
       "type": "shell",
       "command": "./gradlew clean"
