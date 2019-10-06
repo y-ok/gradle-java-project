@@ -30,6 +30,8 @@
 - [Lombok](https://projectlombok.org/)
   - [【Java】Lombokで冗長コードを削減しよう](https://www.casleyconsulting.co.jp/blog/engineer/107/)
 
+- [Shadow](https://imperceptiblethoughts.com/shadow/)
+
 ### TIPS
 
 - [Gradleでpropertiesファイルの文字列を置換](https://blog.scheakur.com/post/41283944018/gradle-%E3%81%A7-ant-%E3%81%AE-replacetokens-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6-properties)
