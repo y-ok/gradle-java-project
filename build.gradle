@@ -21,6 +21,9 @@ plugins {
 
     // Google Formatter
     id 'com.github.sherter.google-java-format' version '0.8'
+
+    // Shadow
+    id 'com.github.johnrengelman.shadow' version '5.1.0'
 }
 
 sourceCompatibility = 1.8
@@ -66,7 +69,7 @@ jacocoTestReport {
 }
 
 spotbugs {
-  toolVersion = '3.1.12'
+    toolVersion = '3.1.12'
 }
 
 // Switch by environment config settings
@@ -74,8 +77,8 @@ apply from: rootProject.file("gradle/environment/${env}/env.gradle")
 
 // To generate an HTML report instead of XML
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
-  reports.xml.enabled = false
-  reports.html.enabled = true
+    reports.xml.enabled = false
+    reports.html.enabled = true
 }
 
 tasks.withType(JavaCompile) {
@@ -84,5 +87,10 @@ tasks.withType(JavaCompile) {
 
 // task to make src/main/resources and test/resources
 task initDirs {
-   sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
+}
+
+// Minimizing an shadow JAR
+shadowJar {
+    minimize()
 }
