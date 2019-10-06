@@ -1,7 +1,12 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	]
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
+    "java.autobuild.enabled": false,
+    "java.configuration.updateBuildConfiguration": "automatic"
+  }
 }
