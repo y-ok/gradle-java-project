@@ -49,7 +49,7 @@ dependencies {
 
 application {
     // Define the main class for the application
-    mainClassName = 'gradle.java.project.App'
+    mainClassName = 'gradle.java.project.Main'
 }
 
 jacoco {
@@ -68,6 +68,9 @@ jacocoTestReport {
 spotbugs {
   toolVersion = '3.1.12'
 }
+
+// Switch by environment config settings
+apply from: rootProject.file("gradle/environment/${env}/env.gradle")
 
 // To generate an HTML report instead of XML
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
