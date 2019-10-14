@@ -3,23 +3,27 @@
  */
 package gradle.java.project;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 public class Main {
-  public String getGreeting() {
-    return "Hello world.";
-  }
-
-  public static void main(String[] args) {
-    System.out.println(new Main().getGreeting());
-
+  public static void main(String[] args) throws MalformedURLException {
     try {
-      ResourceBundle bundle = ResourceBundle.getBundle("application");
+      ResourceBundle bundle = ResourceBundle.getBundle("common");
       String CONFIG_PATH = bundle.getString("CONFIG_PATH");
-      String DB_URL = bundle.getString("DB_URL");
-      String DB_USER = bundle.getString("DB_USER");
-      String DB_PASSWORD = bundle.getString("DB_PASSWORD");
+
+      URLClassLoader urlLoader =
+          new URLClassLoader(new URL[] {new File(CONFIG_PATH).toURI().toURL()});
+      ResourceBundle applicationbundle =
+          ResourceBundle.getBundle("application", Locale.getDefault(), urlLoader);
+      String DB_URL = applicationbundle.getString("DB_URL");
+      String DB_USER = applicationbundle.getString("DB_USER");
+      String DB_PASSWORD = applicationbundle.getString("DB_PASSWORD");
 
       System.out.println(CONFIG_PATH);
       System.out.println(DB_URL);

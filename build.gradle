@@ -94,3 +94,14 @@ task initDirs {
 shadowJar {
     minimize()
 }
+
+task copyPropertiesToConfigPath(type: Copy) {
+    from new File(rootProject.rootDir, 'build/resources/main/application.properties')
+    into { new File(rootProject.rootDir, './') }
+}
+build.dependsOn copyPropertiesToConfigPath
+
+task deleteProperties(type: Delete) {
+    delete './application.properties'
+}
+clean.dependsOn deleteProperties
