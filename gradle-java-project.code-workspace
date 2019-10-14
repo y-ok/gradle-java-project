@@ -7,6 +7,11 @@
   "settings": {
     "java.home": "/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home",
     "java.autobuild.enabled": false,
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.enabled": true,
+    "java.format.settings.url": "./styleguide/eclipse-java-google-style.xml",
+    "java.format.settings.profile": "GoogleStyle",
+    "java.format.comments.enabled": true,
+    "java.format.onType.enabled": true
   }
 }
