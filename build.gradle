@@ -24,6 +24,9 @@ plugins {
 
     // Shadow
     id 'com.github.johnrengelman.shadow' version '5.1.0'
+
+    // tasks tree
+    id "com.dorongold.task-tree" version "1.4"
 }
 
 sourceCompatibility = 1.8
@@ -38,16 +41,25 @@ repositories {
     jcenter()
 }
 
+ext {
+    guavaVersion = '28.0-jre'
+    lombokVersion = '1.18.10'
+    junit5Version = '5.1.0'
+    jacocoVersion = '0.8.4'
+    spotbugsVersion =  '3.1.12'
+}
+
 dependencies {
     // This dependency is used by the application.
-    implementation 'com.google.guava:guava:28.0-jre'
+    implementation "com.google.guava:guava:${guavaVersion}"
 
     // Lombok
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5Version}"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:${junit5Version}"
 }
 
 application {
@@ -56,7 +68,7 @@ application {
 }
 
 jacoco {
-    toolVersion = "0.8.4"
+    toolVersion = "${jacocoVersion}"
     reportsDir = file("$buildDir/customJacocoReportDir")
 }
 
@@ -69,7 +81,7 @@ jacocoTestReport {
 }
 
 spotbugs {
-    toolVersion = '3.1.12'
+    toolVersion = "${spotbugsVersion}"
 }
 
 // Switch by environment config settings
