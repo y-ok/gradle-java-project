@@ -87,3 +87,35 @@ code --install-extension yzane.markdown-pdf
 code --install-extension yzhang.markdown-all-in-one
 code --install-extension Zignd.html-css-class-completion
 ```
+
+### Gradleコマンド一覧
+
+1. ソースコード、テストコードビルド
+
+   ```bash
+   gradle build
+   ```
+
+2. テスト実行
+
+   ```bash
+   gradle test
+   ```
+
+3. カバレッジレポート生成
+
+   ```bash
+   gradle jacocoTestReport
+   ```
+
+4. フォーマッター適用
+
+   ```bash
+   gradle spotlessApply
+   ```
+
+5. 成果物削除
+
+   ```bash
+   gradle clean
+   ```
