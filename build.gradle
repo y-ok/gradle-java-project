@@ -46,6 +46,7 @@ ext {
     lombokVersion = '1.18.10'
     junit5Version = '5.1.0'
     jacocoVersion = '0.8.4'
+    googleJavaFormatVersion = '1.7'
     spotbugsVersion =  '3.1.12'
 }
 
@@ -80,6 +81,10 @@ jacocoTestReport {
     }
 }
 
+googleJavaFormat {
+  toolVersion = "${googleJavaFormatVersion}"
+}
+
 spotbugs {
     toolVersion = "${spotbugsVersion}"
 }
@@ -107,13 +112,13 @@ shadowJar {
     minimize()
 }
 
-task copyPropertiesToConfigPath(type: Copy) {
-    from new File(rootProject.rootDir, 'build/resources/main/application.properties')
-    into { new File(rootProject.rootDir, './') }
-}
-build.dependsOn copyPropertiesToConfigPath
+// task copyPropertiesToConfigPath(type: Copy) {
+//     from new File(rootProject.rootDir, 'build/resources/main/application.properties')
+//     into { new File(rootProject.rootDir, './') }
+// }
+// build.dependsOn copyPropertiesToConfigPath
 
-task deleteProperties(type: Delete) {
-    delete './application.properties'
-}
-clean.dependsOn deleteProperties
+// task deleteProperties(type: Delete) {
+//     delete './application.properties'
+// }
+// clean.dependsOn deleteProperties
