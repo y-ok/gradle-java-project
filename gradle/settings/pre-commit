@@ -1,6 +1,6 @@
 #!/bin/sh
 set -o pipefail
-./gradlew googleJavaFormat | grep "formatted successfully" > /dev/null 2>&1
+./gradlew spotlessApply | grep "formatted successfully" > /dev/null 2>&1
 if [ $? -eq 0 ]; then
     echo "\nJava source code(s) are formatted. Please add files again."
     exit 1

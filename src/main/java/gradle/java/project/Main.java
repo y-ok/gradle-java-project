@@ -25,6 +25,13 @@ public class Main {
       String DB_USER = applicationbundle.getString("DB_USER");
       String DB_PASSWORD = applicationbundle.getString("DB_PASSWORD");
 
+      Data data = new Data();
+      data.setId(1);
+      data.setName("name");
+
+      System.out.println(data.getId());
+      System.out.println(data.getName());
+
       System.out.println(CONFIG_PATH);
       System.out.println(DB_URL);
       System.out.println(DB_USER);
