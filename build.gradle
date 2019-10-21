@@ -82,8 +82,6 @@ jacocoTestReport {
 
 spotless {
     java {
-        // removes any unused imports
-        removeUnusedImports()
         eclipse().configFile "./styleguide/eclipse-java-google-style.xml"
     }
 }
