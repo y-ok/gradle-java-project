@@ -18,7 +18,7 @@
 
 ### フォーマッター
 
-- [google/google-java-format](https://github.com/google/google-java-format)
+- [diffplug/spotless](https://github.com/diffplug/spotless)
 - [google/styleguide](https://github.com/google/styleguide)
   - `styleguide/eclipse-java-google-style.xml`
 
