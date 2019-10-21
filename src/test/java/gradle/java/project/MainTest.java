@@ -3,4 +3,5 @@
  */
 package gradle.java.project;
 
-public class MainTest {}
+public class MainTest {
+}
