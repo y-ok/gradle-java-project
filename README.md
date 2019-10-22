@@ -9,26 +9,25 @@
 ### IDE
 
 - [VSCode](https://code.visualstudio.com/)
-- [Eclipse](https://www.eclipse.org/)
 
 ### ビルドツール
 
 - [gradle](https://gradle.org/)
-  - `5.3.6`
 
 ### フォーマッター
 
 - [diffplug/spotless](https://github.com/diffplug/spotless)
 - [google/styleguide](https://github.com/google/styleguide)
-  - `styleguide/eclipse-java-google-style.xml`
 
 ### 静的解析
 
 - [SpotBugs](https://spotbugs.readthedocs.io/en/stable/index.html)
 
-### OSS
+### ライブラリ
 
 - [Lombok](https://projectlombok.org/)
+- [Guava](https://github.com/google/guava)
+- [JUnit5](https://oohira.github.io/junit5-doc-jp/user-guide/)
 - [Shadow](https://imperceptiblethoughts.com/shadow/)
 
 ### TIPS
@@ -95,10 +94,97 @@ code --install-extension yzhang.markdown-all-in-one
    gradle build
    ```
 
+   `build`タスクの依存関係は以下の通り。
+
+   ```bash
+   $gradle build taskTree
+
+   > Task :taskTree
+
+    ------------------------------------------------------------
+    Root project
+    ------------------------------------------------------------
+
+    :build
+    +--- :assemble
+    |    +--- :distTar
+    |    |    +--- :jar
+    |    |    |    \--- :classes
+    |    |    |         +--- :compileJava
+    |    |    |         \--- :processResources
+    |    |    \--- :startScripts
+    |    +--- :distZip
+    |    |    +--- :jar
+    |    |    |    \--- :classes
+    |    |    |         +--- :compileJava
+    |    |    |         \--- :processResources
+    |    |    \--- :startScripts
+    |    +--- :jar
+    |    |    \--- :classes
+    |    |         +--- :compileJava
+    |    |         \--- :processResources
+    |    +--- :shadowDistTar
+    |    |    +--- :shadowJar
+    |    |    |    \--- :classes
+    |    |    |         +--- :compileJava
+    |    |    |         \--- :processResources
+    |    |    \--- :startShadowScripts
+    |    |         \--- :shadowJar
+    |    |              \--- :classes
+    |    |                   +--- :compileJava
+    |    |                   \--- :processResources
+    |    \--- :shadowDistZip
+    |         +--- :shadowJar
+    |         |    \--- :classes
+    |         |         +--- :compileJava
+    |         |         \--- :processResources
+    |         \--- :startShadowScripts
+    |              \--- :shadowJar
+    |                   \--- :classes
+    |                        +--- :compileJava
+    |                        \--- :processResources
+    +--- :check
+    |    +--- :spotbugsMain
+    |    |    \--- :classes
+    |    |         +--- :compileJava
+    |    |         \--- :processResources
+    |    +--- :spotbugsTest
+    |    |    +--- :classes
+    |    |    |    +--- :compileJava
+    |    |    |    \--- :processResources
+    |    |    \--- :testClasses
+    |    |         +--- :compileTestJava
+    |    |         |    \--- :classes
+    |    |         |         +--- :compileJava
+    |    |         |         \--- :processResources
+    |    |         \--- :processTestResources
+    |    +--- :spotlessCheck
+    |    |    \--- :spotlessJavaCheck
+    |    |         \--- :spotlessJava
+    |    \--- :test
+    |         +--- :classes
+    |         |    +--- :compileJava
+    |         |    \--- :processResources
+    |         \--- :testClasses
+    |              +--- :compileTestJava
+    |              |    \--- :classes
+    |              |         +--- :compileJava
+    |              |         \--- :processResources
+    |              \--- :processTestResources
+    +--- :installGitHooks
+    \--- :processResources
+    ```
+
 2. テスト実行
 
    ```bash
    gradle test
+   ```
+
+   テストレポートは、以下に出力される。
+
+   ```bash
+   build/reports/tests
    ```
 
 3. カバレッジレポート生成
@@ -109,6 +195,8 @@ code --install-extension yzhang.markdown-all-in-one
 
 4. フォーマッター適用
 
+   フォーマッターは`styleguide/eclipse-java-google-style.xml`を適用する。
+
    ```bash
    gradle spotlessApply
    ```
@@ -117,4 +205,32 @@ code --install-extension yzhang.markdown-all-in-one
 
    ```bash
    gradle clean
+   ```
+
+   `build`フォルダが削除される。
+
+6. 静的解析
+
+   ソースコードのチェックは以下のコマンドを実行する。
+
+   ```bash
+   gradle spotbugsMain
+   ```
+
+   レポートは、`build/reports/spotbugs/main.html`に出力される。
+
+   一方、テストコードのチェックは以下のコマンドを実行する。
+
+   ```bash
+   gradle spotbugsTest
+   ```
+
+   レポートは、`build/reports/spotbugs/test.html`に出力される。
+
+7. Git hookの設定
+
+   `git commit`時に自動でフォーマッターを適用するhookを設定する。
+
+   ```bash
+   gradle installGitHooks
    ```
