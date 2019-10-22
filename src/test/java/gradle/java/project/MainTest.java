@@ -3,14 +3,5 @@
  */
 package gradle.java.project;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
 public class MainTest {
-  @Test
-  public void testAppHasAGreeting() {
-    Main classUnderTest = new Main();
-    assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-  }
 }
