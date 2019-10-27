@@ -47,9 +47,16 @@ repositories {
 ext {
     guavaVersion = '28.0-jre'
     lombokVersion = '1.18.10'
+    slf4jVersion =  '1.7.28'
+    logbackVersion = '1.2.3'
     junit5Version = '5.1.0'
     jacocoVersion = '0.8.4'
     spotbugsVersion =  '3.1.12'
+}
+
+configurations {
+    testAnnotationProcessor.extendsFrom annotationProcessor
+    testImplementation.extendsFrom compileOnly
 }
 
 dependencies {
@@ -59,6 +66,13 @@ dependencies {
     // Lombok
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+
+    // slf4j
+    compileOnly "org.slf4j:slf4j-api:${slf4jVersion}"
+
+    // logback
+    compileOnly "ch.qos.logback:logback-classic:${logbackVersion}"
+    compileOnly "ch.qos.logback:logback-core:${logbackVersion}"
 
     // Use JUnit test framework
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5Version}"
