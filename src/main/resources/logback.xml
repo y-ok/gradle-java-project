@@ -1,0 +1,12 @@
+<configuration>
+    <property name="LOG_DIR" value="@LOGBACK_CONFIG_FILE_PATH@" />
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>${LOG_DIR}/debug.log</file>
+        <encoder>
+            <pattern>%-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+    </root>
+</configuration>
