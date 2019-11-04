@@ -36,12 +36,17 @@ targetCompatibility = 1.8
 apply from: rootProject.file('gradle/install-git-hooks.gradle')
 
 repositories {
-    maven {
-        url "repositories"
-    }
+    // maven {
+    //     credentials {
+    //         username 'admin'
+    //         password 'password'
+    //     }
+    //     url 'http://localhost:8081/artifactory/maven-repository/'
+    // }
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    mavenCentral()
 }
 
 ext {
@@ -68,7 +73,8 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // slf4j
-    compileOnly "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
 
     // logback
     compileOnly "ch.qos.logback:logback-classic:${logbackVersion}"

@@ -10,6 +10,8 @@ import java.net.URLClassLoader;
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
   public static void main(String[] args) throws MalformedURLException {
@@ -25,17 +27,21 @@ public class Main {
       String DB_USER = applicationbundle.getString("DB_USER");
       String DB_PASSWORD = applicationbundle.getString("DB_PASSWORD");
 
-      Data data = new Data();
-      data.setId(1);
-      data.setName("name");
-
-      System.out.println(data.getId());
-      System.out.println(data.getName());
-
       System.out.println(CONFIG_PATH);
       System.out.println(DB_URL);
       System.out.println(DB_USER);
       System.out.println(DB_PASSWORD);
+
+      // lombok
+      Data data = new Data();
+      data.setId(1);
+      data.setName("name");
+      System.out.println(data.getId());
+      System.out.println(data.getName());
+
+      // log
+      Logger logger = LoggerFactory.getLogger(Main.class);
+      logger.debug("debug");
 
     } catch (MissingResourceException e) {
       e.printStackTrace();
