@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/junit/platform/junit-platform-commons/1.1.0/junit-platform-commons-1.1.0.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>junit-platform-commons-1.1.0.pom</name>
+  <created>1572874693709</created>
+  <lastModified>1518982946000</lastModified>
+  <size>2041</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874693709</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>41c8c4cb6c4bd09c3869ddb9d4d2dac7de7f6763</original>
+          <actual>41c8c4cb6c4bd09c3869ddb9d4d2dac7de7f6763</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>fd5048b1f0c7e91dc421c9dee533f451</original>
+          <actual>fd5048b1f0c7e91dc421c9dee533f451</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>9e0c77941ee4f1dea33e90e76df45fa180335867a4d39eea0e4bfff093eed3d8</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

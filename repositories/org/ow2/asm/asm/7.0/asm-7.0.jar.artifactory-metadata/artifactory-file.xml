@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/ow2/asm/asm/7.0/asm-7.0.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>asm-7.0.jar</name>
+  <created>1572874697854</created>
+  <lastModified>1540647749000</lastModified>
+  <size>113676</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874697861</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>d74d4ba0dee443f68fb2dcb7fcdb945a2cd89912</original>
+          <actual>d74d4ba0dee443f68fb2dcb7fcdb945a2cd89912</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>4cdf9fd77ce48671ff9fd607f2a8a93c</original>
+          <actual>4cdf9fd77ce48671ff9fd607f2a8a93c</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>b88ef66468b3c978ad0c97fd6e90979e56155b4ac69089ba7a44e9aa7ffe9acf</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

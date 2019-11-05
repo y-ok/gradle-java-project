@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/slf4j/slf4j-simple/1.7.28/slf4j-simple-1.7.28.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>slf4j-simple-1.7.28.pom</name>
+  <created>1572874689629</created>
+  <lastModified>1565425653000</lastModified>
+  <size>1021</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874689630</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>06bbbb1aa6e1d8d387da93cbef0e6b9f586e6e42</original>
+          <actual>06bbbb1aa6e1d8d387da93cbef0e6b9f586e6e42</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>c7cbf846b469ced123e6a2b41fad89bc</original>
+          <actual>c7cbf846b469ced123e6a2b41fad89bc</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>c42078b302068b7bd57b6cfb232fe6dc2eb1a753a59adf62e98b8ed19ba6f4b8</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/projectlombok/lombok/1.18.10/lombok-1.18.10-sources.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>lombok-1.18.10-sources.jar</name>
+  <created>1572874693632</created>
+  <lastModified>1568154279000</lastModified>
+  <size>896815</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874693632</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>1853e1e74e4963a316bd16aa21ce3e9a8c139efe</original>
+          <actual>1853e1e74e4963a316bd16aa21ce3e9a8c139efe</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>dfc9b9fdb63b06d68133f9eca2ebbc32</original>
+          <actual>dfc9b9fdb63b06d68133f9eca2ebbc32</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>8720aa66fda20b756d7464db0ec58636413316e1536a7d0ead4f10c0eaea59f0</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

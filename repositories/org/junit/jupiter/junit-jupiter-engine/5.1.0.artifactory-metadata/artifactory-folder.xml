@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-folder>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/junit/jupiter/junit-jupiter-engine/5.1.0</path>
+    <folder>true</folder>
+  </repoPath>
+  <name>5.1.0</name>
+  <created>1572874692752</created>
+  <lastModified>1572874692752</lastModified>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572869929112</lastUpdated>
+  </additionalInfo>
+</artifactory-folder>

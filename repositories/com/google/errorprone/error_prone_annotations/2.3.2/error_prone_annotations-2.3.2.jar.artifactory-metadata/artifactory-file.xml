@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>com/google/errorprone/error_prone_annotations/2.3.2/error_prone_annotations-2.3.2.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>error_prone_annotations-2.3.2.jar</name>
+  <created>1572874690555</created>
+  <lastModified>1539124611000</lastModified>
+  <size>13166</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874690555</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>d1a0c5032570e0f64be6b4d9c90cdeb103129029</original>
+          <actual>d1a0c5032570e0f64be6b4d9c90cdeb103129029</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>42c8312a7eb4b6ff612049c4f7b514a6</original>
+          <actual>42c8312a7eb4b6ff612049c4f7b514a6</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>357cd6cfb067c969226c442451502aee13800a24e950fdfde77bcdb4565a668d</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

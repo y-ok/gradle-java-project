@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/apache/apache/19/apache-19.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>apache-19.pom</name>
+  <created>1572874698303</created>
+  <lastModified>1516537799000</lastModified>
+  <size>15489</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874698304</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>db8bb0231dcbda5011926dbaca1a7ce652fd5517</original>
+          <actual>db8bb0231dcbda5011926dbaca1a7ce652fd5517</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>3747826d48544cdb5addb9810b15b747</original>
+          <actual>3747826d48544cdb5addb9810b15b747</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>91f7a33096ea69bac2cbaf6d01feb934cac002c48d8c8cfa9c240b40f1ec21df</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

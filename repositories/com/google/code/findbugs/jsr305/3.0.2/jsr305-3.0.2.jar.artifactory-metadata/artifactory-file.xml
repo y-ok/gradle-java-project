@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>jsr305-3.0.2.jar</name>
+  <created>1572874690887</created>
+  <lastModified>1490936147000</lastModified>
+  <size>19936</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874690888</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>25ea2e8b0c338a877313bd4672d3fe056ea78f0d</original>
+          <actual>25ea2e8b0c338a877313bd4672d3fe056ea78f0d</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>dd83accb899363c32b07d7a1b2e4ce40</original>
+          <actual>dd83accb899363c32b07d7a1b2e4ce40</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

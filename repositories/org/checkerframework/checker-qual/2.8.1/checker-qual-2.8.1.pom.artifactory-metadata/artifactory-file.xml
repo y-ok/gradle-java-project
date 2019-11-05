@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/checkerframework/checker-qual/2.8.1/checker-qual-2.8.1.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>checker-qual-2.8.1.pom</name>
+  <created>1572874690417</created>
+  <lastModified>1556742760000</lastModified>
+  <size>2398</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874690417</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>c7e7cde72ffc19ab0f453b6fcc184638a8f3bb11</original>
+          <actual>c7e7cde72ffc19ab0f453b6fcc184638a8f3bb11</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>cbdf0c28ea2ce7399cb1bfa56b0b3df1</original>
+          <actual>cbdf0c28ea2ce7399cb1bfa56b0b3df1</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>f23376b58ed795f2ff47426ac76b996d49e3918442e5d8713e3925f889a77799</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

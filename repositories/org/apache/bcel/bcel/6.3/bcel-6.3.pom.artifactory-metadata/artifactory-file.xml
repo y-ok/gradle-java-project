@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/apache/bcel/bcel/6.3/bcel-6.3.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>bcel-6.3.pom</name>
+  <created>1572874697706</created>
+  <lastModified>1548362336000</lastModified>
+  <size>20030</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874697707</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>9b837a9d3fa707fde026049e32a7e9ca6272f497</original>
+          <actual>9b837a9d3fa707fde026049e32a7e9ca6272f497</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>51f9e5eba29f7eaa020ce2b6b64a7d88</original>
+          <actual>51f9e5eba29f7eaa020ce2b6b64a7d88</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>bc17ace8cf0e24b92b71c6372a33f7094a94b6d12983fd769fcf73b52979bd39</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>
