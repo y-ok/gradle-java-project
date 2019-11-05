@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>commons-lang/commons-lang/2.6/commons-lang-2.6-sources.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>commons-lang-2.6-sources.jar</name>
+  <created>1572874698756</created>
+  <lastModified>1295216507000</lastModified>
+  <size>372982</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874698757</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>67313d715fbf0ea4fd0bdb69217fb77f807a8ce5</original>
+          <actual>67313d715fbf0ea4fd0bdb69217fb77f807a8ce5</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>7e64377d330ddad7cbf1e3554f73d3c3</original>
+          <actual>7e64377d330ddad7cbf1e3554f73d3c3</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>66c2760945cec226f26286ddf3f6ffe38544c4a69aade89700a9a689c9b92380</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

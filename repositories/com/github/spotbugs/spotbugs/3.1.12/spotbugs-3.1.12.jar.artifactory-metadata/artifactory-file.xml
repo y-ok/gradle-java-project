@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>com/github/spotbugs/spotbugs/3.1.12/spotbugs-3.1.12.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>spotbugs-3.1.12.jar</name>
+  <created>1572874701629</created>
+  <lastModified>1551444594000</lastModified>
+  <size>3399194</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874701630</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>f44d1e64d96d683cc930622f1cc23b87a0bcd299</original>
+          <actual>f44d1e64d96d683cc930622f1cc23b87a0bcd299</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>88ee528d08db7c871db40a0e5b2dfd85</original>
+          <actual>88ee528d08db7c871db40a0e5b2dfd85</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>b4106b70092dd9737626435caccf9c895801b265824e51f7609df73414ed3988</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

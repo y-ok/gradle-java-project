@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-folder>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/slf4j/slf4j-parent</path>
+    <folder>true</folder>
+  </repoPath>
+  <name>slf4j-parent</name>
+  <created>1572874690116</created>
+  <lastModified>1572874690116</lastModified>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572869929112</lastUpdated>
+  </additionalInfo>
+</artifactory-folder>

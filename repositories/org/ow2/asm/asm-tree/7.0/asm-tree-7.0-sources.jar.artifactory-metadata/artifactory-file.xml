@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/ow2/asm/asm-tree/7.0/asm-tree-7.0-sources.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>asm-tree-7.0-sources.jar</name>
+  <created>1572874697936</created>
+  <lastModified>1540647765000</lastModified>
+  <size>73183</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874697937</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>6064bf57bbce12aebc8ab96f32efe3f1c6cdd5fc</original>
+          <actual>6064bf57bbce12aebc8ab96f32efe3f1c6cdd5fc</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>f8cc9c75ecfe107cab90ba3f6ea4e386</original>
+          <actual>f8cc9c75ecfe107cab90ba3f6ea4e386</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>8888c88a9889b1b413d90e440b6b9c894e8d31632a473bd70e683645aba382dd</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

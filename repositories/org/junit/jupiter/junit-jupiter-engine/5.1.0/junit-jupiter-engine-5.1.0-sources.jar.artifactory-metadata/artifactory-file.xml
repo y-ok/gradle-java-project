@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/junit/jupiter/junit-jupiter-engine/5.1.0/junit-jupiter-engine-5.1.0-sources.jar</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>junit-jupiter-engine-5.1.0-sources.jar</name>
+  <created>1572874693164</created>
+  <lastModified>1518982866000</lastModified>
+  <size>89796</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874693165</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>6ee32e577850a9004e80a5685ff1afe5af781837</original>
+          <actual>6ee32e577850a9004e80a5685ff1afe5af781837</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>f7793702187114670aee3632e58d54d5</original>
+          <actual>f7793702187114670aee3632e58d54d5</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>d725c8f68351086ba12c870ac5e702e5b229855ee3963927782b03d4e85cd983</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

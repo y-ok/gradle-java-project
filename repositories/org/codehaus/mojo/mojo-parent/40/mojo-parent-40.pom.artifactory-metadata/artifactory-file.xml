@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/codehaus/mojo/mojo-parent/40/mojo-parent-40.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>mojo-parent-40.pom</name>
+  <created>1572874691916</created>
+  <lastModified>1467379585000</lastModified>
+  <size>33621</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874691917</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>d2fa7c95447827e9bbcb8c60bd9484c51202732e</original>
+          <actual>d2fa7c95447827e9bbcb8c60bd9484c51202732e</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>a673ce41af6d2cfec8e310ea2d45f73d</original>
+          <actual>a673ce41af6d2cfec8e310ea2d45f73d</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>fc648dcdc404f8bf66e0583914ecf980176618201227bea114fae85043cb755e</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

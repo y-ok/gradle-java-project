@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/jacoco/org.jacoco.build/0.8.4/org.jacoco.build-0.8.4.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>org.jacoco.build-0.8.4.pom</name>
+  <created>1572874714752</created>
+  <lastModified>1557348970000</lastModified>
+  <size>38673</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874714752</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>8103c6189db8b2382ad9a318bc602a2fe61df711</original>
+          <actual>8103c6189db8b2382ad9a318bc602a2fe61df711</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>37b13129c52c8f42cbe70ce3fd284590</original>
+          <actual>37b13129c52c8f42cbe70ce3fd284590</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>f99814fa178e4af31777e5db2ffb061f1e2aec0c1a43c1bc3316ce89cd1022f8</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

@@ -37,11 +37,8 @@ apply from: rootProject.file('gradle/install-git-hooks.gradle')
 
 repositories {
     maven {
-        url "repositories"
+        url './repositories'
     }
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
 }
 
 ext {
@@ -68,7 +65,8 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // slf4j
-    compileOnly "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-api:${slf4jVersion}"
+    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
 
     // logback
     compileOnly "ch.qos.logback:logback-classic:${logbackVersion}"
@@ -128,71 +126,4 @@ task initDirs {
 // Minimizing an shadow JAR
 shadowJar {
     minimize()
-}
-
-task deleteRepositories(type: Delete) {
-    delete './repositories'
-}
-
-task offlineRepo (type: OfflineMavenRepository) {
-    repoDir = new File(project.projectDir, 'repositories')
-}
-
-import org.gradle.api.tasks.Input
-import org.gradle.api.tasks.OutputDirectory
-import org.gradle.api.tasks.TaskAction
-import org.gradle.api.DefaultTask
-import org.gradle.util.GFileUtils
-import org.gradle.api.artifacts.Configuration
-import org.gradle.api.artifacts.component.ModuleComponentIdentifier
-import org.gradle.maven.MavenModule
-import org.gradle.maven.MavenPomArtifact
-
-class OfflineMavenRepository extends DefaultTask {
-    @OutputDirectory
-    File repoDir = new File(project.buildDir, 'offline-repo')
-    
-    @TaskAction
-    void build() {
-        project.configurations.apiElements.setCanBeResolved(true)
-        project.configurations.implementation.setCanBeResolved(true)
-        project.configurations.runtimeElements.setCanBeResolved(true)
-        project.configurations.runtimeOnly.setCanBeResolved(true)
-        project.configurations.testImplementation.setCanBeResolved(true)
-        project.configurations.testRuntimeOnly.setCanBeResolved(true)
-        
-        for (Configuration configuration : project.configurations.findAll()) {
-            copyJars(configuration)
-            copyPoms(configuration)
-        }
-    }
-    
-    private void copyJars(Configuration configuration) {
-        configuration.resolvedConfiguration.resolvedArtifacts.each { artifact ->
-            def moduleVersionId = artifact.moduleVersion.id
-            File moduleDir = new File(repoDir, "${moduleVersionId.group}/${moduleVersionId.name}/${moduleVersionId.version}")
-            GFileUtils.mkdirs(moduleDir)
-            GFileUtils.copyFile(artifact.file, new File(moduleDir, artifact.file.name))
-        }
-    }
-    
-    private void copyPoms(Configuration configuration) {
-        def componentIds = configuration.incoming.resolutionResult.allDependencies.collect { it.selected.id }
-
-        def result = project.dependencies.createArtifactResolutionQuery()
-            .forComponents(componentIds)
-            .withArtifacts(MavenModule, MavenPomArtifact)
-            .execute()
-
-        for(component in result.resolvedComponents) {
-            def componentId = component.id
-            
-            if(componentId instanceof ModuleComponentIdentifier) {
-                File moduleDir = new File(repoDir, "${componentId.group}/${componentId.module}/${componentId.version}")
-                GFileUtils.mkdirs(moduleDir)                
-                File pomFile = component.getArtifacts(MavenPomArtifact)[0].file
-                GFileUtils.copyFile(pomFile, new File(moduleDir, pomFile.name))
-            }          
-        }
-    }
 }

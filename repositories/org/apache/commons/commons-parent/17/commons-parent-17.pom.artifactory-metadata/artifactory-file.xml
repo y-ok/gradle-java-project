@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-file>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/apache/commons/commons-parent/17/commons-parent-17.pom</path>
+    <folder>false</folder>
+  </repoPath>
+  <name>commons-parent-17.pom</name>
+  <created>1572874698751</created>
+  <lastModified>1278931641000</lastModified>
+  <size>31185</size>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572874698751</lastUpdated>
+    <checksumsInfo>
+      <checksums>
+        <checksum>
+          <type>sha1</type>
+          <original>84bc2f457fac92c947cde9c15c81786ded79b3c1</original>
+          <actual>84bc2f457fac92c947cde9c15c81786ded79b3c1</actual>
+        </checksum>
+        <checksum>
+          <type>md5</type>
+          <original>fb87cc504bd54609f3a93e990471b757</original>
+          <actual>fb87cc504bd54609f3a93e990471b757</actual>
+        </checksum>
+        <checksum>
+          <type>sha256</type>
+          <original>NO_ORIG</original>
+          <actual>96e718baf534874ee62ce4d42de265f2ddacd88391a540e030d59d98fa7c4408</actual>
+        </checksum>
+      </checksums>
+    </checksumsInfo>
+  </additionalInfo>
+</artifactory-file>

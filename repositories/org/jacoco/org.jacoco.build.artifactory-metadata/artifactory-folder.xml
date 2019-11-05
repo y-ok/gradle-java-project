@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<artifactory-folder>
+  <repoPath>
+    <repoKey>maven-repository-cache</repoKey>
+    <path>org/jacoco/org.jacoco.build</path>
+    <folder>true</folder>
+  </repoPath>
+  <name>org.jacoco.build</name>
+  <created>1572874714751</created>
+  <lastModified>1572874714751</lastModified>
+  <additionalInfo>
+    <createdBy>admin</createdBy>
+    <modifiedBy>admin</modifiedBy>
+    <lastUpdated>1572869929112</lastUpdated>
+  </additionalInfo>
+</artifactory-folder>
