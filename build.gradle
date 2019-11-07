@@ -6,6 +6,26 @@
  * User Manual available at https://docs.gradle.org/5.6.2/userguide/tutorial_java_projects.html
  */
 
+buildscript {
+    ext {
+        gradleSpotbugsVersion = '2.0.1'
+        gradleSpotlessVersion = '3.25.0'
+        gradleShadowVersion = '5.1.0'
+        gradleTaskTreeVersion = '1.4'
+    }
+    repositories {
+        maven {
+            url './repositories'
+        }
+    }
+    dependencies {
+        classpath "com.github.spotbugs:spotbugs-gradle-plugin:${gradleSpotbugsVersion}"
+        classpath "com.diffplug.spotless:spotless-plugin-gradle:${gradleSpotlessVersion}"
+        classpath "com.github.jengelman.gradle.plugins:shadow:${gradleShadowVersion}"
+        classpath "gradle.plugin.com.dorongold.plugins:task-tree:${gradleTaskTreeVersion}"
+    }
+}
+
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
@@ -15,19 +35,16 @@ plugins {
 
     // Code coverage
     id 'jacoco'
-
-    // SpotBugs
-    id 'com.github.spotbugs' version '2.0.1'
-
-    // Google Formatter
-    id 'com.diffplug.gradle.spotless' version '3.25.0'
-
-    // Shadow
-    id 'com.github.johnrengelman.shadow' version '5.1.0'
-
-    // tasks tree
-    id "com.dorongold.task-tree" version "1.4"
 }
+
+// SpotBugs
+apply plugin: 'com.github.spotbugs'
+// Google Formatter
+apply plugin: 'com.diffplug.gradle.spotless'
+// Shadow
+apply plugin: 'com.github.johnrengelman.shadow'
+// tasks tree
+apply plugin: 'com.dorongold.task-tree'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
