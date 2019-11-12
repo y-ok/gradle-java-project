@@ -82,8 +82,8 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // slf4j
-    compile "org.slf4j:slf4j-api:${slf4jVersion}"
-    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
+    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
+    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
 
     // logback
     compileOnly "ch.qos.logback:logback-classic:${logbackVersion}"
@@ -106,8 +106,8 @@ jacoco {
 
 jacocoTestReport {
     reports {
-        xml.enabled false
-        csv.enabled false
+        xml.enabled true
+        csv.enabled true
         html.destination file("${buildDir}/jacocoHtml")
     }
 }
@@ -127,7 +127,7 @@ apply from: rootProject.file("gradle/environment/${env}/env.gradle")
 
 // To generate an HTML report instead of XML
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
-    reports.xml.enabled = false
+    reports.xml.enabled = true
     reports.html.enabled = true
 }
 
