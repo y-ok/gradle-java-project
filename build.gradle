@@ -127,7 +127,7 @@ apply from: rootProject.file("gradle/environment/${env}/env.gradle")
 
 // To generate an HTML report instead of XML
 tasks.withType(com.github.spotbugs.SpotBugsTask) {
-    reports.xml.enabled = true
+    reports.xml.enabled = false
     reports.html.enabled = true
 }
 
