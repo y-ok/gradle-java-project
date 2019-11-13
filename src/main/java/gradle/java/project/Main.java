@@ -32,13 +32,6 @@ public class Main {
       System.out.println(DB_USER);
       System.out.println(DB_PASSWORD);
 
-      // lombok
-      Data data = new Data();
-      data.setId(1);
-      data.setName("name");
-      System.out.println(data.getId());
-      System.out.println(data.getName());
-
       // log
       Logger logger = LoggerFactory.getLogger(Main.class);
       logger.debug("debug");

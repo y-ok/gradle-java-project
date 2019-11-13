@@ -60,7 +60,6 @@ repositories {
 
 ext {
     guavaVersion = '28.0-jre'
-    lombokVersion = '1.18.10'
     slf4jVersion =  '1.7.28'
     logbackVersion = '1.2.3'
     junit5Version = '5.1.0'
@@ -76,10 +75,6 @@ configurations {
 dependencies {
     // This dependency is used by the application.
     implementation "com.google.guava:guava:${guavaVersion}"
-
-    // Lombok
-    compileOnly "org.projectlombok:lombok:${lombokVersion}"
-    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
     // slf4j
     implementation "org.slf4j:slf4j-api:${slf4jVersion}"
