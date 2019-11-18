@@ -139,3 +139,17 @@ task initDirs {
 shadowJar {
     minimize()
 }
+
+task makeReleaseDir(dependsOn: assemble) {
+    def dir = new File("$buildDir/release/$project.name")
+    dir.mkdirs()
+}
+
+task deploy(dependsOn: makeReleaseDir) {
+    doLast{
+        copy {
+            from ""
+            into ""
+            }
+    }
+}
