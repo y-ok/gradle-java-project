@@ -141,15 +141,22 @@ shadowJar {
 }
 
 task makeReleaseDir(dependsOn: assemble) {
-    def dir = new File("$buildDir/release/$project.name")
-    dir.mkdirs()
-}
+    def releaseDirs = ['lib', 'properties', 'logs', 'output']
 
-task deploy(dependsOn: makeReleaseDir) {
-    doLast{
-        copy {
-            from ""
-            into ""
-            }
+    def topDir = new File("$buildDir/release/$project.name")
+    topDir.mkdirs()
+
+    releaseDirs.each {
+        def dir = new File("$buildDir/release/$project.name/" + it)
+        dir.mkdirs()
     }
 }
+
+// task deploy(dependsOn: makeReleaseDir) {
+//     doLast{
+//         copy {
+//             from ""
+//             into ""
+//             }
+//     }
+// }
