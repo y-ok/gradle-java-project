@@ -140,7 +140,7 @@ shadowJar {
     minimize()
 }
 
-task makeReleaseDir(dependsOn: assemble) {
+task makeRelease(dependsOn: assemble) {
     def releaseDirs = ['lib', 'properties', 'logs', 'output']
 
     def topDir = new File("$buildDir/release/$project.name")
@@ -150,13 +150,18 @@ task makeReleaseDir(dependsOn: assemble) {
         def dir = new File("$buildDir/release/$project.name/" + it)
         dir.mkdirs()
     }
+    doLast {
+        copy {
+            from "$buildDir/libs"
+            into "$buildDir/release/$project.name/lib"
+            rename(/(.+)-all.jar/, '$1.jar')
+        }
+        copy {
+            from "$buildDir/resources/main"
+            into "$buildDir/release/$project.name/properties"
+            include '*.properties'
+        }
+        def newFile = new File("$buildDir/release/$project.name/" + "${env}".toUpperCase())
+        newFile.createNewFile()
+    }
 }
-
-// task deploy(dependsOn: makeReleaseDir) {
-//     doLast{
-//         copy {
-//             from ""
-//             into ""
-//             }
-//     }
-// }
