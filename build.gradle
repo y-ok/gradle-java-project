@@ -163,5 +163,12 @@ task makeRelease(dependsOn: assemble) {
         }
         def newFile = new File("$buildDir/release/$project.name/" + "${env}".toUpperCase())
         newFile.createNewFile()
+        
+        delete fileTree(dir: "$buildDir/distributions", include: ["*.zip", "*.tar"])
     }
+}
+
+task releaseZip(type: Zip, dependsOn: makeRelease) {
+    classifier = "${env}"
+    from "$buildDir/release/$project.name"
 }
