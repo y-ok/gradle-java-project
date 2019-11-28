@@ -94,6 +94,10 @@ application {
     mainClassName = 'gradle.java.project.Main'
 }
 
+test {
+    useJUnitPlatform()
+}
+
 jacoco {
     toolVersion = "${jacocoVersion}"
     reportsDir = file("$buildDir/customJacocoReportDir")
