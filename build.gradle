@@ -136,8 +136,9 @@ task initDirs {
     sourceSets*.resources.srcDirs*.each { it.mkdirs() }
 }
 
-// Minimizing an shadow JAR
+// shadow JAR
 shadowJar {
+    classifier = ''
 }
 
 task makeRelease(dependsOn: assemble) {
@@ -154,8 +155,6 @@ task makeRelease(dependsOn: assemble) {
         copy {
             from "$buildDir/libs"
             into "$buildDir/release/$project.name/lib"
-            include '*-all.jar'
-            rename(/(.+)-all.jar/, '$1.jar')
         }
         copy {
             from "$buildDir/resources/main"
