@@ -7,7 +7,7 @@
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="${pattern}" />
         </Console>
-        <RollingFile name="file" fileName="log/log4j2.log" filePattern="log/%d{yyyyMM}/log4j2_%d{yyyyMMdd}_%i.log">
+        <RollingFile name="file" fileName="log/log4j2.log" filePattern="log/%d{yyyyMMdd}/log4j2_%d{yyyyMMdd}_%i.log">
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <OnStartupTriggeringPolicy />
