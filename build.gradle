@@ -56,12 +56,14 @@ repositories {
     maven {
         url './repositories'
     }
+    maven {
+        url 'https://repo1.maven.org/maven2/'
+    }
 }
 
 ext {
     guavaVersion = '28.0-jre'
-    slf4jVersion =  '1.7.28'
-    logbackVersion = '1.2.3'
+    log4jVersion = '2.12.1'
     junit5Version = '5.1.0'
     jacocoVersion = '0.8.4'
     spotbugsVersion =  '3.1.12'
@@ -76,13 +78,8 @@ dependencies {
     // This dependency is used by the application.
     implementation "com.google.guava:guava:${guavaVersion}"
 
-    // slf4j
-    implementation "org.slf4j:slf4j-api:${slf4jVersion}"
-    implementation "org.slf4j:slf4j-simple:${slf4jVersion}"
-
-    // logback
-    compileOnly "ch.qos.logback:logback-classic:${logbackVersion}"
-    compileOnly "ch.qos.logback:logback-core:${logbackVersion}"
+    implementation "org.apache.logging.log4j:log4j-core:${log4jVersion}"
+    implementation "org.apache.logging.log4j:log4j-api:${log4jVersion}"
 
     // Use JUnit test framework
     testImplementation "org.junit.jupiter:junit-jupiter-api:${junit5Version}"
@@ -141,11 +138,10 @@ task initDirs {
 
 // Minimizing an shadow JAR
 shadowJar {
-    minimize()
 }
 
 task makeRelease(dependsOn: assemble) {
-    def releaseDirs = ['lib', 'properties', 'logs', 'output']
+    def releaseDirs = ['lib', 'properties', 'log', 'output']
 
     def topDir = new File("$buildDir/release/$project.name")
     topDir.mkdirs()
@@ -158,6 +154,7 @@ task makeRelease(dependsOn: assemble) {
         copy {
             from "$buildDir/libs"
             into "$buildDir/release/$project.name/lib"
+            include '*-all.jar'
             rename(/(.+)-all.jar/, '$1.jar')
         }
         copy {

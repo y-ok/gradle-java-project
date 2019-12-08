@@ -3,41 +3,18 @@
  */
 package gradle.java.project;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Locale;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class Main {
-  public static void main(String[] args) throws MalformedURLException {
-    try {
-      ResourceBundle bundle = ResourceBundle.getBundle("common");
-      String CONFIG_PATH = bundle.getString("CONFIG_PATH");
 
-      URLClassLoader urlLoader =
-          new URLClassLoader(new URL[] {new File(CONFIG_PATH).toURI().toURL()});
-      ResourceBundle applicationbundle =
-          ResourceBundle.getBundle("application", Locale.getDefault(), urlLoader);
-      String DB_URL = applicationbundle.getString("DB_URL");
-      String DB_USER = applicationbundle.getString("DB_USER");
-      String DB_PASSWORD = applicationbundle.getString("DB_PASSWORD");
+  static final Logger logger = LogManager.getLogger(Main.class.getName());
 
-      System.out.println(CONFIG_PATH);
-      System.out.println(DB_URL);
-      System.out.println(DB_USER);
-      System.out.println(DB_PASSWORD);
+  public static void main(String[] args) {
 
-      // log
-      Logger logger = LoggerFactory.getLogger(Main.class);
-      logger.debug("debug");
+    logger.info("START");
 
-    } catch (MissingResourceException e) {
-      e.printStackTrace();
-    }
+    logger.info("END");
+
   }
 }
